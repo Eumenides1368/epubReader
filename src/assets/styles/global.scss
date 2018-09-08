@@ -1,0 +1,23 @@
+@import 'reset';
+
+$fontSize: 37.5;
+@function px2rem($px){
+  @return ($px / $fontSize) + rem;
+}
+
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+  color: #333;
+  font-size: px2rem(20);
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-to, .fade-leave {
+  opacity: 1;
+}
